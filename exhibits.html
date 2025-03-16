@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibit Management - Smith v. Smith</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="img/logo-placeholder.png" alt="Smith Family Law">
+                <h1>Smith Family Law</h1>
+            </div>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span>Welcome, Attorney Smith</span>
+                </div>
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user-tie"></i> Witnesses
+            </a>
+            <a href="exhibits.html" class="nav-item active">
+                <i class="fas fa-file-alt"></i> Exhibits
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-calendar-alt"></i> Trial Scheduling
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-gavel"></i> Motions
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-balance-scale"></i> Orders
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-tasks"></i> Issues
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> > Exhibits
+            </div>
+            <div class="page-title">
+                <h2>Exhibit Management</h2>
+            </div>
+
+            <!-- Exhibits Container -->
+            <div class="exhibits-container">
+                <div class="exhibits-header">
+                    <h3 class="exhibits-title">Case Exhibits</h3>
+                    <div class="exhibits-actions">
+                        <button class="btn">
+                            <i class="fas fa-plus"></i> Add Exhibit
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-upload"></i> Batch Upload
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search exhibits...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label class="filter-label">Party:</label>
+                        <select class="filter-select">
+                            <option value="all">All</option>
+                            <option value="petitioner">Petitioner</option>
+                            <option value="respondent">Respondent</option>
+                            <option value="joint">Joint</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Type:</label>
+                        <select class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="financial">Financial</option>
+                            <option value="property">Property</option>
+                            <option value="personal">Personal</option>
+                            <option value="business">Business</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Date Range:</label>
+                        <select class="filter-select">
+                            <option value="all">All Dates</option>
+                            <option value="last-month">Last Month</option>
+                            <option value="last-quarter">Last Quarter</option>
+                            <option value="last-year">Last Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Status:</label>
+                        <select class="filter-select">
+                            <option value="all">All Status</option>
+                            <option value="draft">Draft</option>
+                            <option value="final">Final</option>
+                            <option value="admitted">Admitted</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Exhibits Table -->
+                <table class="exhibits-table">
+                    <thead>
+                        <tr>
+                            <th>Exhibit #</th>
+                            <th>Description</th>
+                            <th>Party</th>
+                            <th>Date Range</th>
+                            <th>Date Added</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 1</td>
+                            <td>Petitioner bank statement</td>
+                            <td>Petitioner</td>
+                            <td>1/1/24 - 2/28/24</td>
+                            <td>Mar 15, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 2</td>
+                            <td>Petitioner 401k statement</td>
+                            <td>Petitioner</td>
+                            <td>12/31/23</td>
+                            <td>Mar 14, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 3</td>
+                            <td>Home appraisal report</td>
+                            <td>Joint</td>
+                            <td>3/1/24</td>
+                            <td>Mar 12, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 4</td>
+                            <td>Property photos</td>
+                            <td>Joint</td>
+                            <td>3/5/24</td>
+                            <td>Mar 10, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 5</td>
+                            <td>Business valuation report</td>
+                            <td>Petitioner</td>
+                            <td>2/15/24</td>
+                            <td>Mar 8, 2025</td>
+                            <td><span class="status-badge draft">Draft</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 6</td>
+                            <td>Respondent credit card statements</td>
+                            <td>Respondent</td>
+                            <td>1/1/24 - 2/28/24</td>
+                            <td>Mar 7, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 7</td>
+                            <td>Home purchase documents</td>
+                            <td>Joint</td>
+                            <td>4/15/15</td>
+                            <td>Mar 5, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 8</td>
+                            <td>Respondent pay stubs</td>
+                            <td>Respondent</td>
+                            <td>1/1/24 - 2/28/24</td>
+                            <td>Mar 3, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 9</td>
+                            <td>Petitioner pay stubs</td>
+                            <td>Petitioner</td>
+                            <td>1/1/24 - 2/28/24</td>
+                            <td>Mar 2, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="exhibit-number">Exhibit 10</td>
+                            <td>Joint tax returns</td>
+                            <td>Joint</td>
+                            <td>2023</td>
+                            <td>Mar 1, 2025</td>
+                            <td><span class="status-badge final">Final</span></td>
+                            <td class="exhibit-actions">
+                                <button title="View"><i class="fas fa-eye"></i></button>
+                                <button title="Edit"><i class="fas fa-edit"></i></button>
+                                <button title="Download"><i class="fas fa-download"></i></button>
+                                <button title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- AI Assistant for Exhibits -->
+            <div class="exhibits-ai-assistant">
+                <h3><i class="fas fa-robot"></i> AI Exhibit Assistant</h3>
+                <div class="ai-search">
+                    <input type="text" placehold<response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>
